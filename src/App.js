@@ -7,6 +7,8 @@ export default function App(){
   const [toDos,setToDos] = useState([])
 
   const [newTask, setNewTask] = useState("")
+  const [dataDia, setDataDia] = useState("")
+  const [hora, setHora] = useState("")
 
   const addTask = () =>{
     if(newTask.trim()=== "")return
@@ -23,7 +25,21 @@ export default function App(){
   return(
     <div>
       <h1>Minha ToDo List</h1>
-      <div style={container}>
+      <div style={styles.container}>
+        <input 
+        type="date" 
+        placeholder="Entre com uma data" 
+        value={dataDia}
+        onChange={(e)=>setDataDia(e.target.value)}
+        style={styles.inputdh}
+        />
+        <input 
+        type="time" 
+        placeholder="Entre com a hora!" 
+        value={hora}
+        onChange={(e)=>setHora(e.target.value)}
+        style={styles.input}
+        />
         <input 
         type="text" 
         placeholder="Digite uma nova tarefa!" 
