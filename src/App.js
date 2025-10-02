@@ -41,4 +41,26 @@ export default function App(){
     </div>
   )
 }
-
+const styles = {
+  container:{
+    maxWidth:"600px", 
+    margin:"50px",
+    textAlign:"center",
+    fontFamily:"Arial, sans-serif"  
+  },
+inputdh:{
+  padding:"10px",
+  width:"49%",
+  marginRight:"5px",
+  borderRadius:"10px"
+},
+input:{
+  padding:"10px",
+  width:"70%",
+  marginRight:"5px"
+},
+button:{
+  padding:"10px",
+  cursor:"pointer"
+}
+}
