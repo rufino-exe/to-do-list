@@ -23,7 +23,7 @@ export default function App(){
   return(
     <div>
       <h1>Minha ToDo List</h1>
-      <div>
+      <div style={container}>
         <input 
         type="text" 
         placeholder="Digite uma nova tarefa!" 
@@ -43,24 +43,24 @@ export default function App(){
 }
 const styles = {
   container:{
-    maxWidth:"600px", 
-    margin:"50px",
-    textAlign:"center",
-    fontFamily:"Arial, sans-serif"  
+    maxWidth:'600px', 
+    margin:'50px',
+    textAlign:'center',
+    fontFamily:'Arial, sans-serif'  
   },
 inputdh:{
-  padding:"10px",
-  width:"49%",
-  marginRight:"5px",
-  borderRadius:"10px"
+  padding:'10px',
+  width:'49%',
+  marginRight:'5px',
+  borderRadius:'10px'
 },
 input:{
-  padding:"10px",
-  width:"70%",
-  marginRight:"5px"
+  padding:'10px',
+  width:'70%',
+  marginRight:'5px'
 },
 button:{
-  padding:"10px",
-  cursor:"pointer"
+  padding:'10px',
+  cursor:'pointer'
 }
 }

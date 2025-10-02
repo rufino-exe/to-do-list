@@ -13,6 +13,7 @@ const styles = {
     item : {
         padding: '10px',
         border: '1px solid #ccc',
+        background: 'red',
         borderRadius: '15px',
         display: 'Flex',
         justifycontent: 'space-between',
