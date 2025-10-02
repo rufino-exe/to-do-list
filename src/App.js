@@ -9,15 +9,20 @@ export default function App(){
   const [newTask, setNewTask] = useState("")
   const [dataDia, setDataDia] = useState("")
   const [hora, setHora] = useState("")
+  const [visivel, setVisivel] = useState(true)
 
   const addTask = () =>{
     if(newTask.trim()=== "")return
-    const newToDo = {id:Date.now(), Text: newTask}
-    
+    const newToDo = {
+    id:Date.now(),
+    text:newTask,
+    date:dataDia,
+    time:hora
+  }
     setToDos([...toDos,newToDo])
-
     setNewTask("")
   }
+  
   // função que remove uma tarefa pelo id
   const removeTask = (id) =>{
     setToDos(toDos.filter((toDo)=> toDo.id !== id))
@@ -50,8 +55,11 @@ export default function App(){
         <button onClick={addTask} style={styles.button}>
           Adicionar
         </button>
+        <button onClick={()=> setVisivel(!visivel)} style={styles.button}>
+          display
+        </button>
         <div>
-          <ToDoList toDos={toDos} removeTask={removeTask}/>
+          {visivel && <ToDoList toDos={toDos} removeTask={removeTask}/>}
         </div>
       </div>
     </div>
