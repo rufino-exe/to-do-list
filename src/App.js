@@ -38,7 +38,7 @@ export default function App(){
         placeholder="Entre com a hora!" 
         value={hora}
         onChange={(e)=>setHora(e.target.value)}
-        style={styles.input}
+        style={styles.inputdh}
         />
         <input 
         type="text" 
